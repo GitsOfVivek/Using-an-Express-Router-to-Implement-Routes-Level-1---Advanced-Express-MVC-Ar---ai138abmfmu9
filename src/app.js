@@ -23,7 +23,7 @@ router.get('/api/v1/product', (req, res) => {
 		res.status(200).json({
 			status: 'success',
 			results: product.length,
-			product,
+			data: { product },
 		});
 	} catch (error) {
 		res.status(400).json(error);
