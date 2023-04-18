@@ -36,7 +36,7 @@ router.post('/api/v1/product', (req, res) => {
 		//Write your code here
 		const newProduct = req.body;
 		if (!newProduct.title || !newProduct.price) {
-			res.status(404).json({
+			return res.status(404).json({
 				status: 'Error',
 				message: 'Title and price are required',
 			});
